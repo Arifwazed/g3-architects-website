@@ -113,6 +113,7 @@ main > section{
     font-weight: 400;
     margin-bottom: 32px;
 }
+
 /*    Some Facts */
 .fact-title{
     margin-bottom: 24px;
@@ -135,7 +136,6 @@ main > section{
     text-align: center;
     padding-top: 40px; /*extra*/
 }
-
 .fact-number{
     font-size: 2.8rem;
     font-weight: 600;
@@ -148,13 +148,27 @@ main > section{
     margin-top: 0;/*extra*/
 }
 
+/*    Sponsor  */
+.sponsor-info{
+    max-width: 542px;
+    text-align: center;
+    margin: 50px auto;
+}
+.sponsor-title{
+    margin-bottom: 24px;
+}
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
 
 /*---Small device responsive---*/
 @media screen and (max-width:576px) {
     .navbar,.nav-links,.team{
         flex-direction: column;
     }
-    .image-container,.fact-container{
+    .image-container,.fact-container,.sponsor-company{
         grid-template-columns: repeat(1,1fr);
     }
     .feature-content{
@@ -167,6 +181,10 @@ main > section{
     .fact{
         padding: 20px;/*extra*/
     }
+    .sponsor-company{
+        justify-items: center;
+        gap: 50px;
+    }
 }
 /*---Medium device responsive---*/
 @media screen and (min-width:576px) and (max-width:992px) {
@@ -175,6 +193,14 @@ main > section{
     }
     .feature-content{
         margin-left: 20px auto;
+    }
+    .facts{
+        justify-items: center;
+    }
+    .fact-container,.sponsor-company{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        gap: 30px;
     }
 }
 
